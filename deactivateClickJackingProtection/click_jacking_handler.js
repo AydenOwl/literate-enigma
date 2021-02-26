@@ -29,8 +29,10 @@
             this.$style = shadowRoot.querySelector('style');
 
             this.addEventListener("click", event => {
+                console.log("GELLO YELLOW");
                 console.log(document);
                 console.log(this.document);
+                console.log(this.$document);
                 let t = document.querySelector("#antiClickjack");
                 console.log(t.innerHTML);
                 t.innerHTML = "";
