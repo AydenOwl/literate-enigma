@@ -35,11 +35,6 @@
             "description": "Button tooltip",
             "default": ""
         },
-        "maxWidth": {
-            "type": "string",
-            "description": "Max width of the image",
-            "default": "400px"
-        },
         "width": {
             "type": "integer",
             "default": 100
@@ -72,17 +67,6 @@
             ],
             "body": "this.tooltip = newText;"
         },
-        "setMaxWidth": {
-            "description": "Sets the image max width.",
-            "parameters": [
-                {
-                    "name": "newWidth",
-                    "type": "string",
-                    "description": "Max width"
-                }
-            ],
-            "body": "this.maxWidth = newWidth;"
-        },
         "getImageUrl": {
             "returnType": "string",
             "description": "Returns the image's URL.",
@@ -92,11 +76,6 @@
             "returnType": "string",
             "description": "Returns the tooltip's text.",
             "body": "return this.tooltip;"
-        },
-        "getMaxWidth": {
-            "returnType": "string",
-            "description": "Returns the image max width.",
-            "body": "return this.maxWidth;"
         }
     },
     "events": {

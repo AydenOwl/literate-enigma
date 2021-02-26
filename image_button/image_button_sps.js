@@ -12,11 +12,7 @@
 					<tr>
 						<td>Tooltip text</td>
 						<td><input id="sps_tooltip" type="text" size="40" maxlength="40"></td>
-					</tr>   
-					<tr>
-						<td>Image max width</td>
-						<td><input id="sps_max_width" type="text" size="40" maxlength="10"></td>
-					</tr>                                    
+					</tr>                                       
 				</table>                
 				<input type="submit" style="display:none;">
 			</fieldset>
@@ -37,8 +33,7 @@
                 detail: {
                     properties: {
                         imageUrl: this.imageUrl,
-                        tooltip: this.tooltip,
-                        maxWidth: this.maxWidth
+                        tooltip: this.tooltip
                     }
                 }
             }));
@@ -58,14 +53,6 @@
 
         get tooltip() {
             return this._shadowRoot.getElementById("sps_tooltip").value;
-        }
-
-        set maxWidth(newMaxWidth) {
-            this._shadowRoot.getElementById("sps_max_width").value = newMaxWidth;
-        }
-
-        get maxWidth() {
-            return this._shadowRoot.getElementById("sps_max_width").value;
         }
 
     }

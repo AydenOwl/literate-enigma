@@ -40,8 +40,8 @@
             this._props = {};
         }
 
-        render(imageUrl, tooltip, maxWidth) {
-            this.$style.innerHTML = ':host {display: block;} .container {max-width: ' + maxWidth + ';overflow: hidden;} img {width: 100%;object-fit: contain;}';
+        render(imageUrl, tooltip) {
+            this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
             this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
         }
 
@@ -58,11 +58,7 @@
                 this.$tooltip = changedProperties["tooltip"];
             }
 
-            if ("maxWidth" in changedProperties) {
-                this.$tooltip = changedProperties["maxWidth"];
-            }
-
-            this.render(this.$imageUrl, this.$tooltip, this.$maxWidth);
+            this.render(this.$imageUrl, this.$tooltip);
         }
     }
 
