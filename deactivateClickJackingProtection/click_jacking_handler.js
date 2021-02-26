@@ -29,6 +29,8 @@
             this.$style = shadowRoot.querySelector('style');
 
             this.addEventListener("click", event => {
+                console.log(document);
+                console.log(this.document);
                 let t = document.querySelector("#antiClickjack");
                 console.log(t.innerHTML);
                 t.innerHTML = "";
