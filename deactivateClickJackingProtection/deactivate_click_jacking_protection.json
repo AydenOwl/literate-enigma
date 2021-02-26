@@ -1,0 +1,41 @@
+{
+    "id": "com.synvance.clickjackinghandler",
+    "version": "1.0.0",
+    "name": "Click Jacking Handler",
+    "description": "Remove click jacking protection from website",
+    "newInstancePrefix": "ClickJackHandler",
+    "icon": "https://aydenowl.github.io/literate-enigma/icon.png",
+    "vendor": "Synvance",
+    "eula": "EULA",
+    "license": "1.0",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-synvance-clickjackinghandler",
+            "url": "https://aydenowl.github.io/literate-enigma/deactivateClickJackingProtection/click_jacking_handler.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "divToDeactivate": {
+            "type": "string",
+            "description": "Div name to deactivate",
+            "default": ""
+        },
+        "width": {
+            "type": "integer",
+            "default": 100
+        },
+        "height": {
+            "type": "integer",
+            "default": 100
+        }
+    },
+    "methods": {},
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the button."
+        }
+    }
+}
