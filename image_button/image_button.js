@@ -13,9 +13,6 @@
 		</style>
 		
 		<div class="container">
-            <button type="button">
-
-            </button>
 		</div>
 	`;
 
@@ -26,7 +23,7 @@
             shadowRoot.appendChild(template.content.cloneNode(true));
 
             this.$style = shadowRoot.querySelector('style');
-            this.$svg = shadowRoot.querySelector('svg');
+            this.$div = shadowRoot.querySelector('div');
 
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
@@ -38,7 +35,7 @@
 
         render(textColor, backgroundColor, tooltip) {
             this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;} .button {color: + ' + textColor + ';background-color: ' + backgroundColor + ';}';
-            this.$svg.innerHTML = '<button class="button" type="button" title="' + tooltip + '"> </button>';
+            this.$div.innerHTML = '<button class="button" type="button" title="' + tooltip + '"> YELLOW GELLO </button>';
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {

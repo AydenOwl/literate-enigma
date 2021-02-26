@@ -3,7 +3,7 @@
     template.innerHTML = `
 		<form id="form">
 			<fieldset>
-				<legend>Color Properties</legend>
+				<legend>Properties</legend>
 				<table>
 					<tr>
 						<td>Text color</td>
@@ -14,7 +14,6 @@
 						<td><input id="sps_background_color" type="text" size="40" maxlength="40"></td>
 					</tr>                    
 				</table>
-				<legend>Text Properties</legend>
 				<table>
 					<tr>
 						<td>Tooltip text</td>
