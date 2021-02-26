@@ -3,13 +3,8 @@
     template.innerHTML = `
 		<style>
 		:host {
-			border-radius: 10px;
-			border-width: 2px;
-			border-color: black;
-			border-style: solid;
 			display: block;
 		} 
-        
 		</style>
 		
 		<div class="container">
@@ -34,8 +29,8 @@
         }
 
         render(textColor, backgroundColor, tooltip) {
-            this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;} .button {color: + ' + textColor + ';background-color: ' + backgroundColor + ';}';
-            this.$div.innerHTML = '<button class="button" type="button" title="' + tooltip + '"> YELLOW GELLO </button>';
+            this.$style.innerHTML = ':host {display: block;} .button {color: ' + textColor + ';background-color: ' + backgroundColor + ';background-image:url(https://aydenowl.github.io/literate-enigma/image_button/bookmark.png)}';
+            this.$div.innerHTML = '<button class="button" type="button" title="' + tooltip + '"></button>';
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
