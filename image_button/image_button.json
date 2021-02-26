@@ -25,20 +25,20 @@
         }
     ],
     "properties": {
-        "textColor": {
+        "imageUrl": {
             "type": "string",
-            "description": "Text Color value",
-            "default": "#000000"
-        },
-        "backgroundColor": {
-            "type": "string",
-            "description": "Background color value",
-            "default": "#dec087"
+            "description": "URL of the image",
+            "default": "https://aydenowl.github.io/literate-enigma/image_button/bookmark.png"
         },
         "tooltip": {
             "type": "string",
             "description": "Button tooltip",
             "default": ""
+        },
+        "maxWidth": {
+            "type": "string",
+            "description": "Max width of the image",
+            "default": "400px"
         },
         "width": {
             "type": "integer",
@@ -50,27 +50,16 @@
         }
     },
     "methods": {
-        "setBackgroundColor": {
-            "description": "Sets the background color.",
+        "setImageUrl": {
+            "description": "Sets the image URL.",
             "parameters": [
                 {
-                    "name": "newColor",
+                    "name": "newUrl",
                     "type": "string",
-                    "description": "Background color value"
+                    "description": "Image's URL"
                 }
             ],
-            "body": "this.backgroundColor = newColor;"
-        },
-        "setTextColor": {
-            "description": "Sets the text color.",
-            "parameters": [
-                {
-                    "name": "newColor",
-                    "type": "string",
-                    "description": "Text color value"
-                }
-            ],
-            "body": "this.textColor = newColor;"
+            "body": "this.imageUrl = newUrl;"
         },
         "setTooltip": {
             "description": "Sets the tooltip's text.",
@@ -83,20 +72,31 @@
             ],
             "body": "this.tooltip = newText;"
         },
-        "getBackgroundColor": {
-            "returnType": "string",
-            "description": "Returns the background color.",
-            "body": "return this.backgroundColor;"
+        "setMaxWidth": {
+            "description": "Sets the image max width.",
+            "parameters": [
+                {
+                    "name": "newWidth",
+                    "type": "string",
+                    "description": "Max width"
+                }
+            ],
+            "body": "this.maxWidth = newWidth;"
         },
-        "getTextColor": {
+        "getImageUrl": {
             "returnType": "string",
-            "description": "Returns the text color.",
-            "body": "return this.textColor;"
+            "description": "Returns the image's URL.",
+            "body": "return this.imageUrl;"
         },
         "getTooltip": {
             "returnType": "string",
             "description": "Returns the tooltip's text.",
             "body": "return this.tooltip;"
+        },
+        "getMaxWidth": {
+            "returnType": "string",
+            "description": "Returns the image max width.",
+            "body": "return this.maxWidth;"
         }
     },
     "events": {
