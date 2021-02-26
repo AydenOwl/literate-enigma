@@ -40,9 +40,9 @@
             this._props = {};
         }
 
-        render(textColor, backgroundColor, tooltip) {
-            this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
-            this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="https://aydenowl.github.io/literate-enigma/image_button/bookmark.png" />';
+        render(imageUrl, tooltip, maxWidth) {
+            this.$style.innerHTML = ':host {display: block;} .container {max-width: ' + maxWidth + ';overflow: hidden;} img {width: 100%;object-fit: contain;}';
+            this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
@@ -50,19 +50,19 @@
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
-            if ("textColor" in changedProperties) {
-                this.$textColor = changedProperties["textColor"];
-            }
-
-            if ("backgroundColor" in changedProperties) {
-                this.$backgroundColor = changedProperties["backgroundColor"];
+            if ("imageUrl" in changedProperties) {
+                this.$imageUrl = changedProperties["imageUrl"];
             }
 
             if ("tooltip" in changedProperties) {
                 this.$tooltip = changedProperties["tooltip"];
             }
 
-            this.render(this.$textColor, this.$backgroundColor, this.$tooltip);
+            if ("maxWidth" in changedProperties) {
+                this.$tooltip = changedProperties["maxWidth"];
+            }
+
+            this.render(this.$imageUrl, this.$tooltip, this.$maxWidth);
         }
     }
 

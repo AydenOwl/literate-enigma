@@ -6,19 +6,17 @@
 				<legend>Properties</legend>
 				<table>
 					<tr>
-						<td>Text color</td>
-						<td><input id="sps_text_color" type="text" size="40" maxlength="40"></td>
-					</tr>
-					<tr>
-						<td>Background color</td>
-						<td><input id="sps_background_color" type="text" size="40" maxlength="40"></td>
-					</tr>                    
-				</table>
-				<table>
+						<td>Image URL</td>
+						<td><input id="sps_image_url" type="text" size="40" maxlength="500"></td>
+					</tr>                   
 					<tr>
 						<td>Tooltip text</td>
 						<td><input id="sps_tooltip" type="text" size="40" maxlength="40"></td>
-					</tr>                 
+					</tr>   
+					<tr>
+						<td>Image max width</td>
+						<td><input id="sps_max_width" type="text" size="40" maxlength="10"></td>
+					</tr>                                    
 				</table>                
 				<input type="submit" style="display:none;">
 			</fieldset>
@@ -38,28 +36,20 @@
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        textColor: this.textColor,
-                        backgroundColor: this.backgroundColor,
-                        tooltip: this.tooltip
+                        imageUrl: this.imageUrl,
+                        tooltip: this.tooltip,
+                        maxWidth: this.maxWidth
                     }
                 }
             }));
         }
 
-        set textColor(newColor) {
-            this._shadowRoot.getElementById("sps_text_color").value = newColor;
+        set imageUrl(newUrl) {
+            this._shadowRoot.getElementById("sps_image_url").value = newUrl;
         }
 
-        get textColor() {
-            return this._shadowRoot.getElementById("sps_text_color").value;
-        }
-
-        set backgroundColor(newColor) {
-            this._shadowRoot.getElementById("sps_background_color").value = newColor;
-        }
-
-        get backgroundColor() {
-            return this._shadowRoot.getElementById("sps_background_color").value;
+        get imageUrl() {
+            return this._shadowRoot.getElementById("sps_image_url").value;
         }
 
         set tooltip(newText) {
@@ -68,6 +58,14 @@
 
         get tooltip() {
             return this._shadowRoot.getElementById("sps_tooltip").value;
+        }
+
+        set maxWidth(newMaxWidth) {
+            this._shadowRoot.getElementById("sps_max_width").value = newMaxWidth;
+        }
+
+        get maxWidth() {
+            return this._shadowRoot.getElementById("sps_max_width").value;
         }
 
     }
