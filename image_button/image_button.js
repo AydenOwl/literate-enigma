@@ -5,9 +5,21 @@
 		:host {
 			display: block;
 		} 
+
+        .container {
+            max-width: 400px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
 		</style>
 		
 		<div class="container">
+            <img alt="Button image" title="Button image" src="https://aydenowl.github.io/literate-enigma/image_button/bookmark.png" />
 		</div>
 	`;
 
@@ -29,8 +41,8 @@
         }
 
         render(textColor, backgroundColor, tooltip) {
-            this.$style.innerHTML = ':host {display: block;} .button {color: ' + textColor + ';background-color: ' + backgroundColor + ';background-image:url(https://aydenowl.github.io/literate-enigma/image_button/bookmark.png)}';
-            this.$div.innerHTML = '<button class="button" type="button" title="' + tooltip + '"></button>';
+            this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
+            this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="https://aydenowl.github.io/literate-enigma/image_button/bookmark.png" />';
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
