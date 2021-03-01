@@ -27,10 +27,11 @@
 
         hideHeader() {
             console.log("I WAS CALLED");
-            let header = this.shadowRoot.querySelector("#shell-hdr");
-            if (header != null) return false;
+            let header = document.querySelector("#shell-hdr");
+            if (header === null || header === undefined) return false;
             console.log(header);
-            console.log(this.shadowRoot);
+            console.log(document);
+            console.log(this.document);
             header.style = "display:none";
             console.log("DONE");
             return true;
