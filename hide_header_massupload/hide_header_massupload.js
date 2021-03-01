@@ -27,13 +27,16 @@
 
         hideHeader() {
             console.log("I WAS CALLED");
-            let header = document.querySelector("#shell-hdr");
+            console.log(this.document);
+            console.log(document);
+            let header = this.document.querySelector("#shell-hdr");
             if (header === null || header === undefined) return false;
             console.log(header);
             console.log(document);
             console.log(this.document);
             header.style = "display:none";
             console.log("DONE");
+
             return true;
         }
     }
