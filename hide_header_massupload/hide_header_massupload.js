@@ -28,9 +28,12 @@
         hideHeader() {
             console.log("I WAS CALLED");
             let header = this.shadowRoot.querySelector("#shell-hdr");
+            if (header != null) return false;
             console.log(header);
+            console.log(this.shadowRoot);
             header.style = "display:none";
             console.log("DONE");
+            return true;
         }
     }
 

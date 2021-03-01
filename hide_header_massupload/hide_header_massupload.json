@@ -29,7 +29,8 @@
     },
     "methods": {
         "hideHeader": {
-            "description": "Hide the header."
+            "description": "Hide the header.",
+            "returnType": "boolean"
         }
     },
     "events": {}
