@@ -1,0 +1,36 @@
+{
+    "id": "com.synvance.hideheadermassupload",
+    "version": "1.0.0",
+    "name": "Hide header popup",
+    "description": "Remove header from the webpage mass upload",
+    "newInstancePrefix": "HideHeaderMassUpload",
+    "icon": "https://aydenowl.github.io/literate-enigma/icon.png",
+    "vendor": "Synvance",
+    "eula": "EULA",
+    "license": "1.0",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-synvance-hideheadermassupload",
+            "url": "https://aydenowl.github.io/literate-enigma/hide_header_massupload/hide_header_massupload.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "width": {
+            "type": "integer",
+            "default": 100
+        },
+        "height": {
+            "type": "integer",
+            "default": 100
+        }
+    },
+    "methods": {
+        "hideHeader": {
+            "description": "Hide the header."
+        }
+    },
+    "events": {}
+}
